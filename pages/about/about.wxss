@@ -1,3 +1,21 @@
-.info{
-  color: red;
+/* 响应式长度单位rpx,目的在于让元素大小适配于不同的屏幕宽度,
+小程序中指定无论哪种设备，它设备上的屏幕宽度均为750rpx, */
+.container{
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
+.about-banner{
+  width: 375rpx;
+  height: 375rpx;
+  border-radius: 50%;
+}
+.container > text {
+  font-weight: 700;
+}
+.container > text:nth-child(2){
+  font-size: 60rpx;
+} 

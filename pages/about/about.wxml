@@ -1,1 +1,10 @@
-<text class="info">Hello World</text>
+<!-- 这里图片使用的路径是绝对路径，也可以用相对路径来显示 -->
+<!-- 使用弹性盒子布局的方式 -->
+<view class="container">
+  <!-- image元素默认是inline-block元素 -->
+  <image class='about-banner' src="/images/cat.jpeg"></image>
+  <!-- text元素默认是inline元素 -->
+  <text>电影周周看</text>
+  <text>每周推荐一部好片</text>
+  <text>我的微博: weibo.com/yezi</text>
+</view>
