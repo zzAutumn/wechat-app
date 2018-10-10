@@ -10,15 +10,39 @@ Page({
       imagePath: "/images/dog.jpeg",
       isHighlyRecommended: true
     },
+    weeklyMovieList: [
+      {
+        name: "A Dog",
+        comment: "Comment: Dogs are our best friends!",
+        imagePath: "/images/dog.jpeg",
+        isHighlyRecommended: true
+      },
+      {
+        name: "A Dog",
+        comment: "Comment: Dogs are our best friends! Dogs are our best friends!",
+        imagePath: "/images/dog.jpeg",
+        isHighlyRecommended: true
+      },
+      {
+        name: "A Dog",
+        comment: "Comment: Dogs are our best friends!",
+        imagePath: "/images/dog.jpeg",
+        isHighlyRecommended: false
+      }
+    ],
     count: 123,
-    score: 9
+    score: 9,
+    currentIndex: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
+   * 对内部状态数据进行更新
    */
   onLoad: function (options) {
-    
+    this.setData({
+      currentIndex: this.data.weeklyMovieList.length - 1
+    })
   },
 
   /**
@@ -68,5 +92,12 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+
+  showCount(event) {
+    this.setData({
+      count: 888,
+      "weeklyMovieList[2].name": "A Cat?"
+    })
   }
 })

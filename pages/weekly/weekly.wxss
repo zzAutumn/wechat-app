@@ -1,0 +1,27 @@
+.content{
+  display: flex;
+  flex-direction: row;
+}
+.content > image{
+  width: 100px;
+  height: 100px;
+}
+.weekly-wrapper{
+  position: relative;
+}
+swiper{
+  height: 100vh;
+  text-align: center;
+}
+.movie-card{
+  padding-top: 30rpx;
+}
+.return-btn{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  background: blue;
+  color: #fff;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
