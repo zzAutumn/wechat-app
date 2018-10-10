@@ -4,7 +4,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    thisWeekMovie: {
+      name: "A Dog",
+      comment: "Comment: Dogs are our best friends!",
+      imagePath: "/images/dog.jpeg",
+      isHighlyRecommended: true
+    },
+    count: 123,
+    score: 9
   },
 
   /**

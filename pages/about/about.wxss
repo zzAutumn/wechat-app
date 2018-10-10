@@ -19,3 +19,9 @@
 .container > text:nth-child(2){
   font-size: 60rpx;
 } 
+navigator{
+  display: inline-block;
+}
+.nav-hover{
+  color: red;
+}
