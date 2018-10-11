@@ -3,16 +3,22 @@
     previous-margin='50rpx' next-margin='50rpx'
     current='{{currentIndex}}'
   >
-    <swiper-item class='movie' wx:key="{{index}}" wx:for="{{weeklyMovieList}}">
+    <swiper-item class='movie' wx:key="{{index}}" wx:for="{{weeklyMovieList}}"
+      bindtap="goToDetail"
+      data-movie-id="{{item.id}}"
+    >
       <view class='container movie-card'>
          <image src='{{item.imagePath}}'></image>
           <text>第{{index+1}}周 {{item.name}}</text>
           <text>{{item.comment}}</text>
           <text hidden="{{!item.isHighlyRecommended}}" style='color: red'>强烈推荐</text>
       </view>
-      <text class='return-btn' bindtap='returnBtn' wx:if="{{index < weeklyMovieList.length-1}}">返回本周</text>
+      <text class='return-btn' catchtap='returnBtn' wx:if="{{index < weeklyMovieList.length-1}}">返回本周</text>
     </swiper-item>
   </swiper>
   <text>{{count}}</text>
-  <button bindtap='showCount'>Show Count</button>
+  <!-- bindtap绑定的事件为冒泡事件，即不会阻止向父元素传递事件
+    catchtap绑定的事件为非冒泡事件，即会停止向上传递
+   -->
+  <button catchtap='showCount'>Show Count</button>
 </view>
